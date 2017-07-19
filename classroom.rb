@@ -74,7 +74,6 @@ end
 def top_students(grade_hash, number_of_students)
     #Sort by averages desc
     all_averages = averages(grade_hash).sort_by {|k, v| v}.reverse
-    puts all_averages
     names_desc = all_averages.map { |key, average| key }
     names_desc.take(number_of_students)
 end
